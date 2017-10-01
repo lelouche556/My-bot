@@ -85,17 +85,14 @@ while reaction == "y":
 		query = input()
 		print("INITIALISING...")
 		from selenium import webdriver as wd
-
 		bro = wd.Chrome()
 		bro.get('https://www.google.co.in')
 		import pyautogui as pag
-
 		pag.typewrite(query)
 		os.system("espeak 'Now, you will be redirected to another page'")
 		pag.click(165,313)
 		time.sleep(1)
-		elem = bro.find_element_by_css_selector(
-			'#tsf > div.tsf-p > div.jsb > center > input[type="submit"]:nth-child(2)')
+		elem = bro.find_element_by_css_selector('#tsf > div.tsf-p > div.jsb > center > input[type="submit"]:nth-child(2)')
 		elem.click()
 
 
@@ -104,7 +101,6 @@ while reaction == "y":
 		import pyautogui
 		from selenium.webdriver.common.keys import Keys
 		import time
-
 		# Open Whatsapp
 		print('A QR code page will open, scan it with your phone Master')
 		ready = input('Are you ready,Master?  y/n  ')
